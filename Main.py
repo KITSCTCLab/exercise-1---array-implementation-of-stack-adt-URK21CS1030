@@ -5,10 +5,16 @@ class Stack:
         self.size = size
 
     def is_empty(self):
-        return len(self.items)==0
+        if len(self.items)==0:
+            return True
+        else:
+            return Flase
 
     def is_full(self):
-        return len(self.items)==self.size
+        if len(self.items)==self.size:
+            return True
+        else:
+            return Flase
 
     def push(self, data):
         if not self.is_full():
@@ -16,7 +22,7 @@ class Stack:
 
     def pop(self):
         if not self.is_empty():
-            self.items.pop()
+            self.items.pop(-1)
 
     def status(self):
         for element in self.items:
